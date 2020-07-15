@@ -1,0 +1,69 @@
+{
+    "name": "tarfin-labs/laravel-cloudwatch-logger",
+    "description": "Laravel logger for AWS Clouldwatch Log service.",
+    "keywords": [
+        "tarfin-labs",
+        "laravel",
+        "cloudwatch",
+        "laravel-cloudwatch-logger"
+    ],
+    "homepage": "https://github.com/tarfin-labs/laravel-cloudwatch-logger",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Turan Karatuğ",
+            "email": "turan.karatug@tarfin.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Faruk Can",
+            "email": "faruk.can@tarfin.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Emre Deligöz",
+            "email": "emre.deligoz@tarfin.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Hakan Özdemir",
+            "email": "hakan.ozdemir@tarfin.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "illuminate/support": "^7.0",
+        "maxbanton/cwh": "^2.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^5.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "TarfinLabs\\LaravelCloudWatchLogger\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TarfinLabs\\LaravelCloudWatchLogger\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TarfinLabs\\LaravelCloudWatchLogger\\LaravelCloudWatchLoggerServiceProvider"
+            ]
+        }
+    }
+}
