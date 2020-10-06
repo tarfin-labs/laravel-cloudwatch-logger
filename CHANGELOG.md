@@ -2,7 +2,7 @@
 
 All notable changes to `laravel-cloudwatch-logger` will be documented in this file
 
-## 1.1.0 - 2020-10-06
+## 2.0.0 - 2020-10-06
 
 - Support for Laravel 8
 
