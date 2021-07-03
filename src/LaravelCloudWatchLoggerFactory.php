@@ -39,10 +39,12 @@ class LaravelCloudWatchLoggerFactory
 
         $logger->pushHandler($handler);
 
-        $logger->pushProcessor(function ($record) use ($config) {
-            $record['extra'] = $config['extra'];
-            return $record;
-        });
+        if (isset($record['extra'])) {
+            $logger->pushProcessor(function ($record) use ($config) {
+                $record['extra'] = $config['extra'];
+                return $record;
+            });
+        }
 
         return $logger;
     }
