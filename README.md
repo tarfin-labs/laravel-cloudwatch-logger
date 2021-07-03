@@ -14,9 +14,9 @@ composer require tarfin-labs/laravel-cloudwatch-logger
 
 Config parameters for logging are defined at `config/logging.php`.
 
-You need to add new channel as `cloudwatch` and copy params inside `config/config.php` into it. 
+You need to add new channel as `cloudwatch` and copy params inside `config/config.php` into it.
 
-``` php
+```php
 'channels' => [
     ...
 
@@ -36,7 +36,7 @@ You need to add new channel as `cloudwatch` and copy params inside `config/confi
         'stream' => env('CLOUDWATCH_LOG_STREAM', 'default'),
         'retention' => env('CLOUDWATCH_LOG_RETENTION', 7),
         'level' => env('CLOUDWATCH_LOG_LEVEL', 'error'),
-        'extra' => [
+        'extra' => [        // In case there's extra information to be logged
             'env' => env('APP_ENV'),
             'php' => PHP_VERSION,
             'laravel' => app()->version(),
@@ -46,22 +46,24 @@ You need to add new channel as `cloudwatch` and copy params inside `config/confi
 ```
 
 Change the log channel inside `.env` file with `cloudwatch`.
+
 ```dotenv
 LOG_CHANNEL=cloudwatch
 ```
 
 You can use Laravel's default `Log` class to send your logs to CloudWatch.
-````php
+
+```php
 \Illuminate\Support\Facades\Log::info('user logged in successfully', [
-    'id' => 1, 
-    'username' => 'JohnDoe', 
+    'id' => 1,
+    'username' => 'JohnDoe',
     'ip' => '127.0.0.1',
 ]);
-````
+```
 
 ### Testing
 
-``` bash
+```bash
 composer test
 ```
 
@@ -79,11 +81,11 @@ If you discover any security related issues, please email development@tarfin.com
 
 ## Credits
 
-- [Turan Karatuğ](https://github.com/tkaratug)
-- [Faruk Can](https://github.com/frkcn)
-- [Yunus Emre Deligöz](https://github.com/deligoez)
-- [Hakan Özdemir](https://github.com/hozdemir)
-- [All Contributors](../../contributors)
+-   [Turan Karatuğ](https://github.com/tkaratug)
+-   [Faruk Can](https://github.com/frkcn)
+-   [Yunus Emre Deligöz](https://github.com/deligoez)
+-   [Hakan Özdemir](https://github.com/hozdemir)
+-   [All Contributors](../../contributors)
 
 ## License
 
