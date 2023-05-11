@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-cloudwatch-logger` will be documented in this file
 
+## 2.4.0 - 2023-05-11
+
+- PHP 8.2 support added.
+
 ## 2.3.0 - 2023-02-16
 
 - Support for Laravel 10.
