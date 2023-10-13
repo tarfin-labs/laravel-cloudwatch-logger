@@ -3,7 +3,7 @@
 namespace TarfinLabs\LaravelCloudWatchLogger;
 
 use Aws\CloudWatchLogs\CloudWatchLogsClient;
-use Maxbanton\Cwh\Handler\CloudWatch;
+use PhpNexus\Cwh\Handler\CloudWatch;
 use Monolog\Logger;
 
 class LaravelCloudWatchLoggerFactory
