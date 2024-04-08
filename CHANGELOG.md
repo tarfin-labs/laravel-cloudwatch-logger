@@ -2,6 +2,9 @@
 
 All notable changes to `laravel-cloudwatch-logger` will be documented in this file
 
+## 2.6.0 - 2024-04-08
+- Support for Laravel 11 and PHP 8.3
+
 ## 2.5.0 - 2023-11-28
 - Change the vendor of `cwh` package to `phpnexus`.
 
